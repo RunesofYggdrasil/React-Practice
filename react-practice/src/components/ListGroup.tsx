@@ -1,19 +1,16 @@
-function ListGroup() {
-  const listItems = [
-    "Item One",
-    "Item Two",
-    "Item Three",
-    "Item Four",
-    "Item Five",
-  ];
+interface ListGroupProps {
+  listItems: string[];
+  heading: string;
+}
 
+function ListGroup({ listItems, heading }: ListGroupProps) {
   const handleClick = (item: string) => {
     console.log(item);
   };
 
   return (
     <>
-      <h1>a</h1>
+      <h1>{heading}</h1>
       {listItems.length === 0 && <p>Nothing Found</p>}
       <ul className="list-group">
         {listItems.map((listItem) => (
