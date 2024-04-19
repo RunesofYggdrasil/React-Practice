@@ -7,7 +7,7 @@ function ListGroup() {
     "Item Five",
   ];
 
-  const fonClick = (item: string) => {
+  const handleClick = (item: string) => {
     console.log(item);
   };
 
@@ -21,7 +21,7 @@ function ListGroup() {
             className="list-group-item"
             key={listItem}
             onClick={() => {
-              fonClick(listItem);
+              handleClick(listItem);
             }}
           >
             {listItem}
