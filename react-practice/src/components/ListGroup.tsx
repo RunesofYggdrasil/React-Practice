@@ -7,13 +7,23 @@ function ListGroup() {
     "Item Five",
   ];
 
+  const fonClick = (item: string) => {
+    console.log(item);
+  };
+
   return (
     <>
       <h1>a</h1>
       {listItems.length === 0 && <p>Nothing Found</p>}
       <ul className="list-group">
         {listItems.map((listItem) => (
-          <li className="list-group-item" key={listItem}>
+          <li
+            className="list-group-item"
+            key={listItem}
+            onClick={() => {
+              fonClick(listItem);
+            }}
+          >
             {listItem}
           </li>
         ))}
