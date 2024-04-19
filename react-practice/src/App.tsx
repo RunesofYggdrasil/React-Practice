@@ -8,9 +8,18 @@ function App() {
     "Item Four",
     "Item Five",
   ];
+
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
+
   return (
     <div>
-      <ListGroup listItems={listItems} heading="A" />
+      <ListGroup
+        listItems={listItems}
+        heading="A"
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }
